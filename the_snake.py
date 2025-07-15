@@ -1,41 +1,16 @@
 from random import choice, randint
+
 import pygame as pg
 
-# Константы для размеров поля и сетки:
-SCREEN_WIDTH, SCREEN_HEIGHT = 640, 480
-GRID_SIZE = 20
-GRID_WIDTH = SCREEN_WIDTH // GRID_SIZE
-GRID_HEIGHT = SCREEN_HEIGHT // GRID_SIZE
+from constants import (APPLE_COLOR, BOARD_BACKGROUND_COLOR, BORDER_COLOR, DOWN,
+                       GRID_HEIGHT, GRID_SIZE, GRID_WIDTH, LEFT, RIGHT,
+                       SCREEN_HEIGHT, SCREEN_WIDTH, SNAKE_COLOR, SPEED,
+                       STONE_COLOR, UP)
 
-# Направления движения:
-UP = (0, -1)
-DOWN = (0, 1)
-LEFT = (-1, 0)
-RIGHT = (1, 0)
-
-# Цвет фона - черный:
-BOARD_BACKGROUND_COLOR = (0, 0, 0)
-
-# Цвет границы ячейки
-BORDER_COLOR = (93, 216, 228)
-
-# Цвет яблока
-APPLE_COLOR = (255, 0, 0)
-
-# Цвет змейки
-SNAKE_COLOR = (0, 255, 0)
-
-# Цвет камня
-STONE_COLOR = (140, 134, 111)
-
-# Скорость движения змейки:
-SPEED = 10
-
-# Настройка игрового окна:
 screen = pg.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), 0, 32)
 
 # Заголовок окна игрового поля:
-pg.display.set_caption('Змейка')
+pg.display.set_caption('The Snake')
 
 # Настройка времени:
 clock = pg.time.Clock()
